@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+ .button.is-primary {
+    background-color: #3da9fc
+ }
+ .button.is-primary:hover {
+    background-color: #1c3f64;
+ }
+.justify-content-center {
+    width: 33.333333%;
+    margin: auto;
+}
+html {
+    background-color: #fffffe;
+}
+
+a.content {
+    color: #094067;
+}
+
+input.button.is-small {
+    display: flex;
+    margin: auto;
+}
+
+
+
+ 

@@ -1,0 +1,37 @@
+
+
+
+
+<div class="justify-content-center">
+<h2 class= 'title'>註冊</h2>
+<div class="is-flex">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email, '電子信箱' %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, '密碼' %>
+    <% if @minimum_password_length %>
+    <em>最少(<%= @minimum_password_length %> 位長度)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", class:"input" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, '確認密碼' %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"input" %>
+  </div>
+
+
+    <%= f.submit "註冊", class: "button is-primary" %>
+<%= render "devise/shared/links" %>
+<% end %>
+
+
+
+</div>
+</div>
