@@ -1,4 +1,6 @@
 <div class="justify-content-center">
+<div class="card">
+  <div class="card-content">
 <h2 class= 'title'>忘記密碼?</h2>
 <div class="is-flex">
 
@@ -7,17 +9,20 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email, '電子信箱' %><br />
+    <%= f.label :email, '電子信箱', class: 'label' %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'input' %>
   </div>
 
   <div class="actions">
     <%= f.submit "重置密碼", class: 'button is-small' %>
   </div>
-  <br />
+  <hr>
+  
   <%= render "devise/shared/links" %>
 <% end %>
 
 
+</div>
+</div>
 </div>
 </div>

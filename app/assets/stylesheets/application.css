@@ -13,15 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
  .button.is-primary {
-    background-color: #3da9fc
+    color: #3da9fc;
+    background-color: #fffffe;
+    border: 1px solid #3da9fc;
  }
  .button.is-primary:hover {
-    background-color: #1c3f64;
+    background-color: #3da9fc;
+    color: #fffffe;
  }
 .justify-content-center {
     width: 33.333333%;
     margin: auto;
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 html {
     background-color: #fffffe;
@@ -35,7 +44,19 @@ input.button.is-small {
     display: flex;
     margin: auto;
 }
-
-
+.button.is-light.login {
+    background-color: #fffffe;
+    color: #686868;
+}
+.button.is-light.login:hover {
+    background-color: #f4fbff;
+    color: #3da9fc;
+}
 
  
+/* edit user info
+    .is-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+} */

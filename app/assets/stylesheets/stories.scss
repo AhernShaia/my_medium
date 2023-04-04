@@ -1,0 +1,38 @@
+// Place all the styles related to the Stories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.justify-content-center.story {
+    width: 80%;
+}
+.is-flex.story {
+    width: 100%;
+    display: block !important;
+}
+.button.is-primary.publish {
+    color: #fffffe;
+    background-color: #3da9fc;
+ }
+
+ .button.is-primary.publish:hover {
+    color: #fffffe;
+    background-color: #2e7dba;
+ }
+
+ .card.stories{
+    width: 70%;
+    margin-right: auto;
+
+    .card-content.stories {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        .media {
+            flex-direction: column;
+            align-items: center;
+
+            .media-left {
+                margin: 0;
+            }
+        }
+    }
+ }
+
