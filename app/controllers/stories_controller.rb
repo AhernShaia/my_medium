@@ -24,9 +24,18 @@ class StoriesController < ApplicationController
   end
 
   def update
+    if @story.update(story_params)
+      redirect_to edit_story_path(@story), notice: "故事已更新"
+      
+    else
+    end
   end
 
   def destroy
+    if @story.destroy
+      redirect_to stories_path, notice: "#{@story.title}已刪除"
+    else
+    end
   end
 
   private
@@ -36,6 +45,6 @@ class StoriesController < ApplicationController
   end
 
   def find_story
-    @story = Story.find(params[:id])
+    @story = current_user.stories.find(params[:id])
   end
 end

@@ -53,7 +53,9 @@ input.button.is-small {
     color: #3da9fc;
 }
 
- 
+ a{
+    text-decoration: none !important;
+ }
 /* edit user info
     .is-flex {
     flex-direction: column;

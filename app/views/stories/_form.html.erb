@@ -12,9 +12,10 @@
             </div>
 
             <div class="field">
-              <%= f.label :title, "內容", class: "label" %>
-              <%= f.text_area :title, class: "textarea has-fixed-size", rows: 10 %>
+              <%= f.label :content, "內容", class: "label" %>
+              <%= f.text_area :content, class: "textarea has-fixed-size", rows: 10 %>
             </div>
+
             
             <%= f.submit(params[:action] == 'new' ? '儲存草稿' : '更新故事' ,class: 'button is-light login')  %>
             <%= f.submit(params[:action] == 'new' ? '發佈故事' : '更新故事' ,class: 'button  is-primary publish')  %>
