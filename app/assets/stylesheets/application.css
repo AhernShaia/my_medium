@@ -62,3 +62,8 @@ input.button.is-small {
     align-items: center;
     text-align: center;
 } */
+
+.notification.is-link {
+    margin: auto;
+    width: 60%;
+}

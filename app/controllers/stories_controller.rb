@@ -32,7 +32,7 @@ class StoriesController < ApplicationController
   end
 
   def destroy
-    if @story.destroy
+    if @story.update(deleted_at: Time.now)
       redirect_to stories_path, notice: "#{@story.title}已刪除"
     else
     end
