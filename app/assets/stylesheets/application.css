@@ -14,14 +14,19 @@
  *= require_self
  */
 
+ .is-primary {
+    background-color: #3da9fc !important;
+ }
+
  .button.is-primary {
-    color: #3da9fc;
-    background-color: #fffffe;
-    border: 1px solid #3da9fc;
+    color: #fffffe;
+    background-color: #3da9fc;
+ 
  }
  .button.is-primary:hover {
-    background-color: #3da9fc;
-    color: #fffffe;
+    background-color: #fffffe !important;
+    color: #3da9fc;
+    border: 1px solid #3da9fc;
  }
 .justify-content-center {
     width: 33.333333%;
@@ -66,4 +71,7 @@ input.button.is-small {
 .notification.is-link {
     margin: auto;
     width: 60%;
+}
+nav.navbar.has-shadow {
+    margin-bottom: 2rem;
 }

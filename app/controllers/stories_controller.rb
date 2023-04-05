@@ -13,8 +13,15 @@ class StoriesController < ApplicationController
   def create
     # @story = current.new(story_params)
     @story = current_user.stories.new(story_params)
+    @story.status = 'published' if params[:publish]
+
     if @story.save
-      redirect_to stories_path, notice: "#{@story.title}已新增"
+      if params[:publish]
+        redirect_to stories_path, notice: "#{@story.title}已成功發佈"
+      else
+        redirect_to edit_story_path(@story), notice: "草稿已儲存"
+      end
+      
     else
       render :new
     end

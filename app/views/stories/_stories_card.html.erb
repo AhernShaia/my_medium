@@ -13,7 +13,9 @@
     </div>
 
     <div class="content">
-        <h3 class="title"><%= story.title %> </h3>
+        <h3 class="title"><%= story.title %> <span class="tag is-primary">
+ <%= story_status(story.status)%>
+</span></h3>
         <p><%= story.content %></p>
 
       <br>
