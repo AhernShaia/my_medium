@@ -1,10 +1,11 @@
-module StoriesHelper
+# frozen_string_literal: true
 
-    def story_status(status)
-        if status == 'draft'
-            status = '草稿'
-        else
-            status = '已發佈'
-        end
-    end
+module StoriesHelper
+  def story_status(status)
+    status = if status == 'draft'
+               '草稿'
+             else
+               '已發佈'
+             end
+  end
 end

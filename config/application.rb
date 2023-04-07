@@ -1,6 +1,8 @@
-require_relative "boot"
+# frozen_string_literal: true
 
-require "rails/all"
+require_relative 'boot'
+
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -17,8 +19,7 @@ module MyMedium
     # in config/environments, which are processed later.
     #
     # config.time_zone = "Central Time (US & Canada)"
-    config.time_zone = "Taipei"
+    config.time_zone = 'Taipei'
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
-

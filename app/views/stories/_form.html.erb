@@ -17,9 +17,11 @@
             </div>
 
             
-            <%= f.submit(params[:action] == 'new' ? '儲存草稿' : '更新故事' ,class: 'button is-light login', name: 'save_as_draft')  %>
-            <%= f.submit(params[:action] == 'new' ? '發佈故事' : '更新故事' ,class: 'button  is-primary publish', name: 'publish')  %>
+            <%= f.submit '儲存草稿', class: 'button is-light login', name: 'save_as_draft'  %>
+            <%= f.submit '發佈故事', class: 'button is-primary login', name: 'publish' if story.may_publish?  %>
+            <%= f.submit '故事下架', class: 'button is-danger login', name: 'unpublish' if story.may_unpublish?  %>
 
+           
           <% end %>
         </div>
       </div>
